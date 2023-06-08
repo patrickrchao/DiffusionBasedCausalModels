@@ -1,0 +1,24 @@
+name: dcm
+channels:
+  - defaults
+dependencies:
+  - pip
+  - python=3.9.0
+  - pip:
+    - dowhy==0.8
+    - matplotlib==3.5.2
+    - networkx==2.6.3
+    - numpy==1.21.2
+    - pandas==1.3.5
+    - pytorch-lightning==1.4.9
+    - scikit-learn==1.0
+    - scipy==1.7.1
+    - seaborn==0.11.2
+    - torch==1.10.0
+    #- torch-cluster==1.5.9
+    #- torch-geometric==2.2.0
+    #- torch-scatter==2.0.9
+    #- torch-sparse==0.6.13
+    #- torch-spline-conv==1.2.1
+    #- torchvision==0.11.1
+    - tqdm==4.62.3

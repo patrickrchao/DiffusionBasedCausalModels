@@ -1,0 +1,14 @@
+dataset:
+  name: german
+  params1:
+    data_dir: ../Data
+    batch_size: 100 #  1024
+    num_workers: 0
+  params2: # total of 1000 datapoints
+    num_samples_tr: 800
+    normalize: lik # null, power, std
+    normalize_A: null # default: nul
+  params3:
+    train_kfold: False
+    kfold_idx: 5
+

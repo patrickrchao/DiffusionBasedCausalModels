@@ -1,0 +1,13 @@
+dataset:
+  name: loan
+  params1:
+    data_dir: ../Data
+    batch_size: 1000 #  1024
+    num_workers: 0
+  params2: # Parameters we can cross validate
+    num_samples_tr: 5000
+    equations_type: linear # non-linear, #non-additive
+    normalize: lik # null, power, std
+    likelihood_names: 'b_d_d_d_d_d_d'
+    lambda_: 0.05
+    normalize_A: null # default: null

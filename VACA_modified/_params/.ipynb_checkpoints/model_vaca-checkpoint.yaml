@@ -1,0 +1,27 @@
+
+optimizer:
+  name: adam
+  params:
+    lr: 0.005
+    betas: [0.9, 0.999]
+    weight_decay: 1.2e-6 # L2 regularization
+scheduler:
+  name: exp_lr
+  params:
+    gamma: 0.99
+model:
+  name: vaca
+  params:
+    architecture: dgnn
+    estimator: elbo #multi elbo_iwae, simple iwaedreg, elbo, iwae
+    h_dim_list_dec: [8, 8]
+    h_dim_list_enc: [16]
+    z_dim: 4
+    distr_z: normal
+    dropout_adj_rate: 0.0
+    dropout_adj_pa_rate: 0.2
+    dropout_adj_pa_prob_keep_self: 0.0
+    residual: 0.0
+    norm_categorical: 0 # False, True
+
+

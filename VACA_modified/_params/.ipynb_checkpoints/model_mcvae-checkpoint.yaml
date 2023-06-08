@@ -1,0 +1,22 @@
+
+optimizer:
+  name: adam
+  params:
+    lr: 0.005
+    betas: [0.9, 0.999]
+    weight_decay: 1.2e-6 # L2 regularization
+scheduler:
+  name: exp_lr
+  params:
+    gamma: 0.99
+model:
+  name: mcvae #other option mfvgae, fvgae
+  params:
+    h_dim_list_dec: [32, 32]
+    h_dim_list_enc: [32, 32]
+    z_dim: 1
+    act_name: relu # Activation name
+    drop_rate: 0.0
+    distr_z: normal
+
+
