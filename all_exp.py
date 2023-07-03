@@ -242,8 +242,8 @@ def all_exp(equations_type, scm_type, use_vaca):
             train_df = get_train_data(vaca_data_module, graph, true_model)
 
             
-            #fit_model(vaca_model, cfg, vaca_data_module)
-            #fit_model(carefl_model, carefl_cfg, vaca_data_module)
+            fit_model(vaca_model, cfg, vaca_data_module)
+            fit_model(carefl_model, carefl_cfg, vaca_data_module)
         else:
             train_df, _ = true_model.sample(n)
             train_df = reindex_columns(column_order,train_df)
@@ -290,13 +290,14 @@ def all_exp(equations_type, scm_type, use_vaca):
 
 
 if __name__ == '__main__':
+    # These parameters may be changed
     n = 5000
     num_epochs = 500
     num_initializations = 10 
     num_int_samples = 100
     num_interventions = 20
     num_obs_samples = 1000
-    use_vaca = False
+    use_vaca = True
     if use_vaca:
         warnings.warn("To run VACA and CAREFL experiments, please install VACA from: https://github.com/psanch21/VACA")
         sys.path.append('VACA_modified/')
